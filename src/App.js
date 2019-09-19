@@ -1,11 +1,10 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
+import Navbar from "./Components/Navbar/Navbar.Component";
 
 const App = () => {
   return (
     <div>
-      <h1>This is Reshop</h1>
-      <Button primary>Get Started</Button>
+      <Navbar />
     </div>
   );
 };

@@ -1,0 +1,13 @@
+.book-navbar {
+  display: flex;
+  justify-content: space-between;
+
+  &::after {
+    display: none;
+  }
+}
+
+.ui.menu:after {
+  content: none;
+  display: none;
+}
