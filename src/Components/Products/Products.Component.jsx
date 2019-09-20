@@ -14,6 +14,11 @@ const Products = () => {
         <ProductItem />
         <ProductItem />
         <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
       </div>
     </Container>
   );

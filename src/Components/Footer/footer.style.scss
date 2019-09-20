@@ -1,0 +1,19 @@
+.reshop-footer {
+  height: 60px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+
+  * {
+    color: #fff;
+  }
+
+  .social-links {
+    i {
+      font-size: 20px;
+      margin: 6px;
+    }
+  }
+}

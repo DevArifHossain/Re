@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Image } from "semantic-ui-react";
+import { Card, Image, Button } from "semantic-ui-react";
 import catchingFire from "../../../assets/images/books/fiction/Catching-Fire.jpg";
 
 import "./product-item.style.scss";
@@ -17,6 +17,13 @@ const ProductItem = () => {
       <Card.Content extra>
         <h3>Price</h3>
       </Card.Content>
+
+
+      {/* Details Overlay */}
+      <div className="product-card__overaly">
+        <Button primary>View Details</Button>
+        <Button>Add to Cart</Button>
+      </div>
     </Card>
   );
 };
