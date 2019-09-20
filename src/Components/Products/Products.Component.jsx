@@ -5,8 +5,13 @@ import "./products.style.scss";
 
 const Products = () => {
   return (
-    <Container>
+    <Container fluid>
       <div className="products-con">
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
         <ProductItem />
         <ProductItem />
         <ProductItem />

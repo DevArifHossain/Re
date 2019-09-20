@@ -1,5 +1,7 @@
 import React from "react";
-import { Card, Image, Button } from "semantic-ui-react";
+import { Card, Image, Modal, Button } from "semantic-ui-react";
+import ProductDetail from '../ProductDetail/ProductDetail.Component'
+
 import catchingFire from "../../../assets/images/books/fiction/Catching-Fire.jpg";
 
 import "./product-item.style.scss";
@@ -21,8 +23,8 @@ const ProductItem = () => {
 
       {/* Details Overlay */}
       <div className="product-card__overaly">
-        <Button primary>View Details</Button>
-        <Button>Add to Cart</Button>
+          <ProductDetail />
+        <Button primary>Add to Cart</Button>
       </div>
     </Card>
   );
