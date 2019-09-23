@@ -1,31 +1,43 @@
 import React from "react";
 import { Container } from "semantic-ui-react";
-import {uid} from 'react-uid';
-import books from '../../data/booksData'
+import { withRouter } from "react-router-dom";
+import { uid } from "react-uid";
+import books from "../../data/booksData";
 import ProductItem from "../Products/ProductItem/ProductItem.Component";
 import "./products.style.scss";
 
-class Products extends React.Component {
+// showing all books for all page
+const allBooks = () => {
+  let items = Object.keys(books);
 
+  return items.map(key =>
+    books[key].map(book => <ProductItem key={uid(book)} data={book} />)
+  );
+};
+
+// showing different categorized books on different routes
+const speBooks = () => {
+  let urlPrams = window.location.pathname.substr(1);
+
+  return books[urlPrams].map(book => (
+    <ProductItem key={uid(book)} data={book} />
+  ));
+};
+
+class Products extends React.Component {
   state = {
     productData: books
-  }
+  };
 
   render() {
-    const {fiction, mystery, history, fantasy, science, others} = this.state.productData
-    return(
+    return (
       <Container fluid>
-      <div className="products-con">
-        {
-          fiction.map(fic => <ProductItem key={uid(fic)} data={fic} />)
-        }
-        {
-          mystery.map(mys => <ProductItem key={uid(mys)} data={mys} />) 
-        }
-      </div>
-    </Container>
-    )
+        <div className="products-con">
+          {window.location.pathname === "/" ? allBooks() : speBooks()}
+        </div>
+      </Container>
+    );
   }
 }
 
-export default Products;
+export default withRouter(Products);

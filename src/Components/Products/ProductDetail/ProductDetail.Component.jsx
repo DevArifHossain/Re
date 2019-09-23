@@ -5,9 +5,8 @@ import productImage from "../../../assets/images/books/fiction/Catching-Fire.jpg
 import "./product-detail.style.scss";
 
 const ProductDetail = ({ data }) => {
-  const { title, author, length, publisher, language } = data;
+  const { title, author, length, price, publisher, language } = data;
 
-  console.log(data)
   return (
     <Modal
       trigger={<Button>View Details</Button>}
@@ -17,7 +16,7 @@ const ProductDetail = ({ data }) => {
         <Image wrapped size="medium" src={productImage} />
         <Modal.Description>
           <h1 className="product-title">{title}</h1>
-          <h2 className="product-price">$6.99</h2>
+          <h2 className="product-price">$ {price}</h2>
           <ul className="product-details">
             <li>
               <span className="type">Author :</span>

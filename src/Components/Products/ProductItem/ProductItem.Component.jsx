@@ -7,10 +7,7 @@ import catchingFire from "../../../assets/images/books/fiction/Catching-Fire.jpg
 import "./product-item.style.scss";
 
 const ProductItem = ({ data }) => {
-  // console.log(data)
-  const { title, author, length, publisher, language } = data;
-
-  console.log(title);
+  const { title, author, price } = data;
   return (
     <Card className="product-card">
       <Image src={catchingFire} wrapped ui={false} />
@@ -21,10 +18,9 @@ const ProductItem = ({ data }) => {
         </Card.Meta>
       </Card.Content>
       <Card.Content extra>
-        <h3>Price</h3>
+        <h3>{price} $</h3>
       </Card.Content>
 
-      {/* Details Overlay */}
       <div className="product-card__overaly">
         <ProductDetail data={data} />
         <Button primary>Add to Cart</Button>
