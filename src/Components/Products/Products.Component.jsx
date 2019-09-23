@@ -2,42 +2,45 @@ import React from "react";
 import { Container } from "semantic-ui-react";
 import { withRouter } from "react-router-dom";
 import { uid } from "react-uid";
-import books from "../../data/booksData";
+import { connect } from "react-redux";
+
 import ProductItem from "../Products/ProductItem/ProductItem.Component";
 import "./products.style.scss";
 
 // showing all books for all page
-const allBooks = () => {
-  let items = Object.keys(books);
+const allProducts = products => {
+  let items = Object.keys(products);
 
   return items.map(key =>
-    books[key].map(book => <ProductItem key={uid(book)} data={book} />)
+    products[key].map(product => (
+      <ProductItem key={uid(product)} data={product} />
+    ))
   );
 };
 
 // showing different categorized books on different routes
-const speBooks = () => {
+const speProducts = products => {
   let urlPrams = window.location.pathname.substr(1);
 
-  return books[urlPrams].map(book => (
-    <ProductItem key={uid(book)} data={book} />
+  return products[urlPrams].map(product => (
+    <ProductItem key={uid(product)} data={product} />
   ));
 };
 
-class Products extends React.Component {
-  state = {
-    productData: books
-  };
+const Products = ({ products }) => {
+  return (
+    <Container fluid>
+      <div className="products-con">
+        {window.location.pathname === "/"
+          ? allProducts(products)
+          : speProducts(products)}
+      </div>
+    </Container>
+  );
+};
 
-  render() {
-    return (
-      <Container fluid>
-        <div className="products-con">
-          {window.location.pathname === "/" ? allBooks() : speBooks()}
-        </div>
-      </Container>
-    );
-  }
-}
+const mapStateToProps = ({ products }) => ({
+  products: products.data
+});
 
-export default withRouter(Products);
+export default connect(mapStateToProps)(withRouter(Products));
