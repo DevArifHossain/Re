@@ -1,7 +1,6 @@
 import React from "react";
-import { Container } from "semantic-ui-react";
+import { Container, ItemMeta } from "semantic-ui-react";
 import { withRouter } from "react-router-dom";
-import { uid } from "react-uid";
 import { connect } from "react-redux";
 
 import ProductItem from "../Products/ProductItem/ProductItem.Component";
@@ -11,9 +10,11 @@ import "./products.style.scss";
 const allProducts = products => {
   let items = Object.keys(products);
 
+  console.log(items.map(key => products[key]));
+
   return items.map(key =>
     products[key].map(product => (
-      <ProductItem key={uid(product)} data={product} />
+      <ProductItem key={product.id} data={product} />
     ))
   );
 };
@@ -23,7 +24,7 @@ const speProducts = products => {
   let urlPrams = window.location.pathname.substr(1);
 
   return products[urlPrams].map(product => (
-    <ProductItem key={uid(product)} data={product} />
+    <ProductItem key={product.id} data={product} />
   ));
 };
 

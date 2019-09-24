@@ -1,12 +1,14 @@
 import React from "react";
 import { Card, Image, Button } from "semantic-ui-react";
-import ProductDetail from "../ProductDetail/ProductDetail.Component";
+import { connect } from "react-redux";
 
+import ProductDetail from "../ProductDetail/ProductDetail.Component";
+import { addProductAction } from "../../../redux/products/productAction";
 import catchingFire from "../../../assets/images/books/fiction/Catching-Fire.jpg";
 
 import "./product-item.style.scss";
 
-const ProductItem = ({ data }) => {
+const ProductItem = ({ data, addItem }) => {
   const { title, author, price } = data;
   return (
     <Card className="product-card">
@@ -23,10 +25,19 @@ const ProductItem = ({ data }) => {
 
       <div className="product-card__overaly">
         <ProductDetail data={data} />
-        <Button primary>Add to Cart</Button>
+        <Button primary onClick={() => addItem(data)}>
+          Add to Cart
+        </Button>
       </div>
     </Card>
   );
 };
 
-export default ProductItem;
+const mapDispathToProps = dispatch => ({
+  addItem: item => dispatch(addProductAction(item))
+});
+
+export default connect(
+  null,
+  mapDispathToProps
+)(ProductItem);

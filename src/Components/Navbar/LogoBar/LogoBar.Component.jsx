@@ -1,8 +1,10 @@
 import React from "react";
 import { Icon } from "semantic-ui-react";
+import { connect } from "react-redux";
 import "./logo-bar.style.scss";
 
-const LogoBar = () => {
+const LogoBar = ({ productQuantity }) => {
+  console.log(productQuantity);
   return (
     <nav className="logo-bar">
       <span className="nav-logo">
@@ -13,10 +15,17 @@ const LogoBar = () => {
           <Icon name="shopping bag" />
           Cart :
         </span>
-        <span className="items">0 Items</span>
+        <span className="items">{productQuantity} Items</span>
       </span>
     </nav>
   );
 };
 
-export default LogoBar;
+const mapStateToProps = ({ products }) => ({
+  productQuantity: products.addedItems.reduce(
+    (totalQ, item) => totalQ + item.quantity,
+    0
+  )
+});
+
+export default connect(mapStateToProps)(LogoBar);

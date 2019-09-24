@@ -1,7 +1,9 @@
+import nanoid from "nanoid";
+
 const books = {
   fiction: [
     {
-      key: 1,
+      id: nanoid(),
       title: "To Kill a Mockingbird",
       author: "Harper Lee",
       price: 6.99,
@@ -10,7 +12,7 @@ const books = {
       language: "English"
     },
     {
-      key: 2,
+      id: nanoid(),
       title: "Harry Potter and the Sorcerer's Stone",
       author: "J.K. Rowling",
       price: 12.0,
@@ -19,7 +21,7 @@ const books = {
       language: "English"
     },
     {
-      key: 3,
+      id: nanoid(),
       title: "The Kite Runner",
       author: "Khaled Hosseini",
       price: 8.5,
@@ -28,7 +30,7 @@ const books = {
       language: "English"
     },
     {
-      key: 4,
+      id: nanoid(),
       title: "Catching Fire",
       author: "Suzanne Collins",
       price: 9.99,
@@ -37,7 +39,7 @@ const books = {
       language: "English"
     },
     {
-      key: 5,
+      id: nanoid(),
       title: "Brave New World",
       author: "Aldous Huxley",
       price: 20.38,
@@ -48,7 +50,7 @@ const books = {
   ],
   mystery: [
     {
-      key: 6,
+      id: nanoid(),
       title: "The Girl with the Dragon Tattoo",
       author: "Stieg Larsson",
       price: 9.99,
@@ -57,7 +59,7 @@ const books = {
       language: "English"
     },
     {
-      key: 7,
+      id: nanoid(),
       title: "The Adventures of Sherlock Holmes",
       author: "Arthur Conan Doyle",
       price: 33.33,
@@ -66,7 +68,7 @@ const books = {
       language: "English"
     },
     {
-      key: 8,
+      id: nanoid(),
       title: "Rebecca",
       author: "Daphne du Maurier",
       price: 19.99,
@@ -77,7 +79,7 @@ const books = {
   ],
   history: [
     {
-      key: 9,
+      id: nanoid(),
       title: "The Diary of a Young Girl",
       author: "Anne Frank",
       price: 3.33,
@@ -86,7 +88,7 @@ const books = {
       language: "English"
     },
     {
-      key: 10,
+      id: nanoid(),
       title: "John Adams",
       author: "David McCullough",
       price: 8.79,
@@ -98,7 +100,7 @@ const books = {
 
   fantasy: [
     {
-      key: 11,
+      id: nanoid(),
       title: "Animal Farm",
       author: "George Orwell",
       price: 6.99,
@@ -108,7 +110,7 @@ const books = {
     },
 
     {
-      key: 12,
+      id: nanoid(),
       title: "The Handmaid's Tale",
       author: "Margaret Atwood",
       price: 15.15,
@@ -120,7 +122,7 @@ const books = {
 
   science: [
     {
-      key: 13,
+      id: nanoid(),
       title: "A Brief History of Time",
       author: "Stephen Hawking",
       publisher: "Bantam Books",
@@ -129,7 +131,7 @@ const books = {
       language: "English"
     },
     {
-      key: 14,
+      id: nanoid(),
       title: "Guns, Germs, and Steel: The Fates of Human Societies",
       author: "Jared Diamond",
       publisher: "W.W. Norton & Company ",
@@ -138,7 +140,7 @@ const books = {
       language: "English"
     },
     {
-      key: 15,
+      id: nanoid(),
       title: "Thinking, Fast and Slow",
       author: "Daniel Kahneman",
       publisher: "Farrar, Straus and Giroux",
@@ -147,7 +149,7 @@ const books = {
       language: "English"
     },
     {
-      key: 16,
+      id: nanoid(),
       title: "Homo Deus: A History of Tomorrow",
       author: "Yuval Noah Harari",
       price: 7.79,
@@ -159,7 +161,7 @@ const books = {
 
   others: [
     {
-      key: 17,
+      id: nanoid(),
       title: "Steve Jobs",
       author: "Walter Isaacson",
       price: 35.0,
@@ -168,7 +170,7 @@ const books = {
       language: "English"
     },
     {
-      key: 18,
+      id: nanoid(),
       title: "The Reckless Oath We Made",
       author: "Bryn Greenwood",
       price: 16.32,
@@ -177,7 +179,7 @@ const books = {
       language: "English"
     },
     {
-      key: 19,
+      id: nanoid(),
       title: "The Silent Patient",
       author: "Alex Michaelides",
       publisher: "Celadon Books",
