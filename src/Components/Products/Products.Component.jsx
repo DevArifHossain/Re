@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, ItemMeta } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -9,8 +9,6 @@ import "./products.style.scss";
 // showing all books for all page
 const allProducts = products => {
   let items = Object.keys(products);
-
-  console.log(items.map(key => products[key]));
 
   return items.map(key =>
     products[key].map(product => (

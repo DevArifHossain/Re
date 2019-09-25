@@ -4,15 +4,14 @@ import { connect } from "react-redux";
 
 import ProductDetail from "../ProductDetail/ProductDetail.Component";
 import { addProductAction } from "../../../redux/products/productAction";
-import catchingFire from "../../../assets/images/books/fiction/Catching-Fire.jpg";
 
 import "./product-item.style.scss";
 
 const ProductItem = ({ data, addItem }) => {
-  const { title, author, price } = data;
+  const { title, author, price, imgUrl } = data;
   return (
     <Card className="product-card">
-      <Image src={catchingFire} wrapped ui={false} />
+      <Image src={imgUrl} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{title}</Card.Header>
         <Card.Meta>

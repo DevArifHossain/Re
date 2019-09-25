@@ -1,9 +1,12 @@
 .reshop-footer {
   height: 60px;
   background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   * {
     color: #fff;

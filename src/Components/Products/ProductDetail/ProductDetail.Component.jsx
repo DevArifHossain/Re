@@ -1,11 +1,10 @@
 import React from "react";
 import { Modal, Image, Button } from "semantic-ui-react";
-import productImage from "../../../assets/images/books/fiction/Catching-Fire.jpg";
 
 import "./product-detail.style.scss";
 
 const ProductDetail = ({ data }) => {
-  const { title, author, length, price, publisher, language } = data;
+  const { title, author, length, price, publisher, language, imgUrl } = data;
 
   return (
     <Modal
@@ -13,7 +12,7 @@ const ProductDetail = ({ data }) => {
       className="product-detail-modal"
     >
       <Modal.Content image>
-        <Image wrapped size="medium" src={productImage} />
+        <Image wrapped size="medium" src={imgUrl} />
         <Modal.Description>
           <h1 className="product-title">{title}</h1>
           <h2 className="product-price">$ {price}</h2>

@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import "./logo-bar.style.scss";
 
 const LogoBar = ({ productQuantity }) => {
-  console.log(productQuantity);
   return (
     <nav className="logo-bar">
       <span className="nav-logo">
