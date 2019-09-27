@@ -1,10 +1,14 @@
 import React from "react";
 import { Modal, Image, Button } from "semantic-ui-react";
+import { connect } from "react-redux";
 
+import { addProductAction } from "../../../redux/products/productAction";
 import "./product-detail.style.scss";
 
-const ProductDetail = ({ data }) => {
+const ProductDetail = ({ data, addItem, productQuantity }) => {
   const { title, author, length, price, publisher, language, imgUrl } = data;
+
+  // const addItemHandler = () => {};
 
   return (
     <Modal
@@ -34,10 +38,32 @@ const ProductDetail = ({ data }) => {
               <span className="result">{language}</span>
             </li>
           </ul>
+
+          {/* TODO: show indivisual items */}
+          {/* <form className="product-quntity-form"> */}
+          {/* <input type="text" value={productQuantity} /> */}
+          <Button secondary onClick={() => addItem(data)}>
+            Add To Chart
+          </Button>
+          {/* </form> */}
         </Modal.Description>
       </Modal.Content>
     </Modal>
   );
 };
 
-export default ProductDetail;
+const mapDispatchToProps = dispatch => ({
+  addItem: item => dispatch(addProductAction(item))
+});
+
+const mapStateToProps = ({ products }) => ({
+  productQuantity: products.addedItems.reduce(
+    (totalQ, item) => totalQ + item.quantity,
+    0
+  )
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProductDetail);

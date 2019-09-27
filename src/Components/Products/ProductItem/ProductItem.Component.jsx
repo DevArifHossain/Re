@@ -19,7 +19,7 @@ const ProductItem = ({ data, addItem }) => {
         </Card.Meta>
       </Card.Content>
       <Card.Content extra>
-        <h3>{price} $</h3>
+        <h3 className="price">{price} $</h3>
       </Card.Content>
 
       <div className="product-card__overaly">

@@ -15,7 +15,7 @@
     position: relative;
 
     .image {
-      height: 250px;
+      height: 265px;
       padding: 10px;
       transition: all 0.3s;
 
@@ -24,6 +24,18 @@
       }
     }
 
+    .content {
+      .header {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .price {
+      text-align: center;
+      color: green;
+    }
     .product-card__overaly {
       position: absolute;
       top: 0;
