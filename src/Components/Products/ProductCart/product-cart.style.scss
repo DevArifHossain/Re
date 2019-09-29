@@ -1,3 +1,4 @@
+@import "../../../index.scss";
 .product-cart {
   width: 280px;
   height: 320px;
@@ -8,6 +9,18 @@
 
   .product-items {
     padding: 0;
+    height: 70%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .not-added {
+      font-size: 3rem;
+      font-family: $light-font;
+      color: red;
+      font-weight: 100;
+      letter-spacing: 2px;
+      margin: 2rem 1rem;
+      text-align: center;
+    }
     .item {
       display: flex;
       img {
@@ -17,10 +30,20 @@
       }
       .title {
         white-space: nowrap;
-        width: 200px;
+        width: 190px;
         overflow: hidden;
         text-overflow: ellipsis;
       }
+    }
+  }
+
+  .checkout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .total {
+      color: green;
+      margin: 0;
     }
   }
 }
