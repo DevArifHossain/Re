@@ -3,6 +3,8 @@ import { Icon } from "semantic-ui-react";
 import { connect } from "react-redux";
 import "./logo-bar.style.scss";
 
+import ProductCart from "../../Products/ProductCart/ProductCart.Component";
+
 const LogoBar = ({ productQuantity }) => {
   return (
     <nav className="logo-bar">
@@ -16,6 +18,7 @@ const LogoBar = ({ productQuantity }) => {
         </span>
         <span className="items">{productQuantity} Items</span>
       </span>
+      <ProductCart />
     </nav>
   );
 };
