@@ -1,5 +1,9 @@
 import productTypes from "./productTypes";
-import { addItemsToChart } from "./productUtils";
+import {
+  addItemsToChart,
+  decreaseItemFromCart,
+  removeItemFromCart
+} from "./productUtils";
 import books from "../../data/booksData";
 
 import HarryPotterAndSorcerStone from "../../assets/images/books/fiction/Harry-Potter-and-the-Sorcerers-Stone.jpg";
@@ -32,6 +36,18 @@ const productReducer = (state = defaultState, action) => {
       return {
         ...state,
         addedItems: addItemsToChart(state.addedItems, action.payload)
+      };
+
+    case productTypes.DECREASE_PRODUCT:
+      return {
+        ...state,
+        addedItems: decreaseItemFromCart(state.addedItems, action.payload)
+      };
+
+    case productTypes.REMOVE_PRODUCT:
+      return {
+        ...state,
+        addedItems: removeItemFromCart(state.addedItems, action.payload)
       };
     default:
       return state;

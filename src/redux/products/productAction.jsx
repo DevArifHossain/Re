@@ -8,3 +8,13 @@ export const addProductAction = item => ({
   type: productTypes.ADD_PRODUCTS,
   payload: item
 });
+
+export const decreaseProductAction = item => ({
+  type: productTypes.DECREASE_PRODUCT,
+  payload: item
+});
+
+export const removeProductAction = item => ({
+  type: productTypes.REMOVE_PRODUCT,
+  payload: item
+});

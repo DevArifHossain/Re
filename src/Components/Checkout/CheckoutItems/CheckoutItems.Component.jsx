@@ -1,9 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Table, Image, Button, Icon } from "semantic-ui-react";
-import { addProductAction } from "../../../redux/products/productAction";
+import {
+  addProductAction,
+  decreaseProductAction,
+  removeProductAction
+} from "../../../redux/products/productAction";
 
-const CheckoutItems = ({ products, addProduct }) => {
+const CheckoutItems = ({
+  products,
+  addProduct,
+  decreaseProduct,
+  removeProduct
+}) => {
   return (
     <Table celled padded>
       <Table.Header>
@@ -26,7 +35,7 @@ const CheckoutItems = ({ products, addProduct }) => {
             <Table.Cell>$ {item.price}</Table.Cell>
             <Table.Cell>
               <Button.Group secondary>
-                <Button icon>
+                <Button icon onClick={() => decreaseProduct(item)}>
                   <Icon name="minus" />
                 </Button>
                 <Button>{item.quantity}</Button>
@@ -39,7 +48,9 @@ const CheckoutItems = ({ products, addProduct }) => {
               $ {(Number(item.price) * item.quantity).toFixed(2)}
             </Table.Cell>
             <Table.Cell>
-              <Button color="red">Remove</Button>
+              <Button color="red" onClick={() => removeProduct(item)}>
+                Remove
+              </Button>
             </Table.Cell>
           </Table.Row>
         ))}
@@ -53,7 +64,9 @@ const mapStateToProps = ({ products }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addProduct: item => dispatch(addProductAction(item))
+  addProduct: item => dispatch(addProductAction(item)),
+  decreaseProduct: item => dispatch(decreaseProductAction(item)),
+  removeProduct: item => dispatch(removeProductAction(item))
 });
 
 export default connect(
