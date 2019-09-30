@@ -2,9 +2,23 @@ import productTypes from "./productTypes";
 import { addItemsToChart } from "./productUtils";
 import books from "../../data/booksData";
 
+import HarryPotterAndSorcerStone from "../../assets/images/books/fiction/Harry-Potter-and-the-Sorcerers-Stone.jpg";
+
 const defaultState = {
   data: books,
-  addedItems: []
+  addedItems: [
+    {
+      id: 234324,
+      title: "Harry Potter and the Sorcerer's Stone",
+      imgUrl: HarryPotterAndSorcerStone,
+      author: "J.K. Rowling",
+      price: "12.00",
+      publisher: "Scholastic Inc",
+      length: "322 pages",
+      language: "English",
+      quantity: 22
+    }
+  ]
 };
 
 const productReducer = (state = defaultState, action) => {

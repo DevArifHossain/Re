@@ -1,0 +1,18 @@
+@import "../../../index.scss";
+
+.checkout-summary {
+  margin: 2rem 0;
+  box-shadow: 0px 0px 8px #d3d3d3;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  .total {
+    font-size: 1.8rem;
+    font-family: $light-font;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}

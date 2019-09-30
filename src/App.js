@@ -1,15 +1,14 @@
 import React from "react";
-import Navbar from "./Components/Navbar/Navbar.Component";
-import Products from "./Components/Products/Products.Component";
-import Footer from "./Components/Footer/Footer.Component";
+import { Switch, Route } from "react-router-dom";
+import Homepage from "./Pages/Homepage/Homepage.page";
+import Checkout from "./Pages/Checkout/Checkout.page";
 
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <Products />
-      <Footer />
-    </div>
+    <Switch>
+      <Route exact path="/" component={Homepage} />
+      <Route exact path="/checkout" component={Checkout} />
+    </Switch>
   );
 };
 export default App;

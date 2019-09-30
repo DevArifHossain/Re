@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "semantic-ui-react";
+import { Icon, Container } from "semantic-ui-react";
 import { connect } from "react-redux";
 import "./logo-bar.style.scss";
 
@@ -17,19 +17,21 @@ class LogoBar extends React.Component {
     };
     const { productQuantity } = this.props;
     return (
-      <nav className="logo-bar">
-        <span className="nav-logo">
-          <span style={{ color: "#61DBFB", fontWeight: "bold" }}>Re</span>Shop
-        </span>
-        <span className="re-cart" onClick={cartVisibilityHandler}>
-          <span className="cart">
-            <Icon name="shopping bag" />
-            Cart :
+      <Container fluid>
+        <nav className="logo-bar">
+          <span className="nav-logo">
+            <span style={{ color: "#61DBFB", fontWeight: "bold" }}>Re</span>Shop
           </span>
-          <span className="items">{productQuantity} Items</span>
-        </span>
-        {this.state.showCart && <ProductCart />}
-      </nav>
+          <span className="re-cart" onClick={cartVisibilityHandler}>
+            <span className="cart">
+              <Icon name="shopping bag" />
+              Cart :
+            </span>
+            <span className="items">{productQuantity} Items</span>
+          </span>
+          {this.state.showCart && <ProductCart />}
+        </nav>
+      </Container>
     );
   }
 }

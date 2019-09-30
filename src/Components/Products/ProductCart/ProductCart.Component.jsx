@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { List, Divider, Button } from "semantic-ui-react";
 import "./product-cart.style.scss";
 
@@ -27,7 +28,9 @@ const ProductChart = ({ productItems }) => {
       <Divider />
       <div className="checkout">
         <h3 className="total">$55.55</h3>
-        <Button secondary>CHECKOUT</Button>
+        <Button secondary>
+          <Link to="/checkout">CHECKOUT</Link>
+        </Button>
       </div>
     </div>
   );
