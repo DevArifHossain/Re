@@ -1,0 +1,17 @@
+.featured-products {
+  background-color: #d3d3d3;
+  height: 500px;
+  margin: 2rem 0 4rem 0;
+
+  .featured-product {
+    display: flex !important;
+    padding: 20px 40px;
+    .content {
+      margin-left: 4rem;
+
+      table {
+        margin: 3rem 0;
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@ const books = {
       title: "To Kill a Mockingbird",
       imgUrl: ToKillMockingBird,
       author: "Harper Lee",
-      price: "6.99",
+      price: 6.99,
       publisher: "Harper Perennial Modern Classics",
       length: "324 pages",
       language: "English"
@@ -37,7 +37,7 @@ const books = {
       title: "Harry Potter and the Sorcerer's Stone",
       imgUrl: HarryPotterAndSorcerStone,
       author: "J.K. Rowling",
-      price: "12.00",
+      price: 12.0,
       publisher: "Scholastic Inc",
       length: "322 pages",
       language: "English"
@@ -47,7 +47,7 @@ const books = {
       title: "The Kite Runner",
       imgUrl: TheKiteRunner,
       author: "Khaled Hosseini",
-      price: "8.50",
+      price: 8.5,
       publisher: "Riverhead Books",
       length: "371 pages",
       language: "English"
@@ -57,7 +57,7 @@ const books = {
       title: "Catching Fire",
       imgUrl: CatchingFire,
       author: "Suzanne Collins",
-      price: "9.99",
+      price: 9.99,
       publisher: "Scholastic Press",
       length: "391 pages",
       language: "English"
@@ -67,7 +67,7 @@ const books = {
       title: "Brave New World",
       imgUrl: BraveNewWorld,
       author: "Aldous Huxley",
-      price: "20.38",
+      price: 20.38,
       publisher: "HarperPerennial / Perennial Classics",
       length: "288 pages",
       language: "English"
@@ -79,7 +79,7 @@ const books = {
       title: "The Girl with the Dragon Tattoo",
       imgUrl: TheGirlWithDragonTatto,
       author: "Stieg Larsson",
-      price: "9.99",
+      price: 9.99,
       publisher: "Knopf",
       length: "465 pages",
       language: "English"
@@ -89,7 +89,7 @@ const books = {
       title: "The Adventures of Sherlock Holmes",
       imgUrl: TheAdventuresOfSherlokHomes,
       author: "Arthur Conan Doyle",
-      price: "33.33",
+      price: 33.33,
       publisher: "Oxford University Press",
       length: "339 pages",
       language: "English"
@@ -99,7 +99,7 @@ const books = {
       title: "Rebecca",
       imgUrl: Rebecca,
       author: "Daphne du Maurier",
-      price: "19.99",
+      price: 19.99,
       publisher: "Little, Brown and Company",
       length: "449 pages",
       language: "English"
@@ -111,7 +111,7 @@ const books = {
       title: "The Diary of a Young Girl",
       imgUrl: TheDiaryOfYoungGirl,
       author: "Anne Frank",
-      price: "3.33",
+      price: 3.33,
       publisher: "Bantam",
       length: "283 pages",
       language: "English"
@@ -121,7 +121,7 @@ const books = {
       title: "John Adams",
       imgUrl: JohnAdams,
       author: "David McCullough",
-      price: "8.79",
+      price: 8.79,
       publisher: "Simon & Schuster Paperbacks",
       length: "751 pages",
       language: "English"
@@ -134,7 +134,7 @@ const books = {
       title: "Animal Farm",
       imgUrl: AnimalFarm,
       author: "George Orwell",
-      price: "6.99",
+      price: 6.99,
       publisher: "NAL",
       length: "122 pages",
       language: "English"
@@ -145,7 +145,7 @@ const books = {
       title: "The Handmaid's Tale",
       imgUrl: TheHandmaidsTale,
       author: "Margaret Atwood",
-      price: "15.15",
+      price: 15.15,
       publisher: "Anchor Books",
       length: "344 pages",
       language: "English"
@@ -159,7 +159,7 @@ const books = {
       imgUrl: BriefHistoryOfTime,
       author: "Stephen Hawking",
       publisher: "Bantam Books",
-      price: "36.99",
+      price: 36.99,
       length: "212 pages",
       language: "English"
     },
@@ -169,7 +169,7 @@ const books = {
       imgUrl: GGS_TheFatesOfHumanSocieties,
       author: "Jared Diamond",
       publisher: "W.W. Norton & Company ",
-      price: "19.00",
+      price: 19.0,
       length: "425 pages",
       language: "English"
     },
@@ -179,7 +179,7 @@ const books = {
       imgUrl: ThinkingFastAndSlow,
       author: "Daniel Kahneman",
       publisher: "Farrar, Straus and Giroux",
-      price: "11.48",
+      price: 11.48,
       length: "499 pages",
       language: "English"
     },
@@ -188,7 +188,7 @@ const books = {
       title: "Homo Deus: A History of Tomorrow",
       imgUrl: HistoryOfTomorrow,
       author: "Yuval Noah Harari",
-      price: "7.79",
+      price: 7.79,
       publisher: "Harper",
       length: "450 pages",
       language: "English"
@@ -201,7 +201,7 @@ const books = {
       title: "Steve Jobs",
       imgUrl: SteveJobs,
       author: "Walter Isaacson",
-      price: "35.00",
+      price: 35.0,
       publisher: "Simon & Schuster",
       length: "656 pages",
       language: "English"
@@ -211,7 +211,7 @@ const books = {
       title: "The Reckless Oath We Made",
       imgUrl: TheRecklessOathWeMade,
       author: "Bryn Greenwood",
-      price: "16.32",
+      price: 16.32,
       publisher: "G.P. Putnam's Sons",
       length: "448 pages",
       language: "English"
@@ -222,7 +222,7 @@ const books = {
       imgUrl: TheSilentPatient,
       author: "Alex Michaelides",
       publisher: "Celadon Books",
-      price: "17.49",
+      price: 17.49,
       length: "323 pages",
       language: "English"
     }

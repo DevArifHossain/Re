@@ -16,7 +16,7 @@ const defaultState = {
       title: "Harry Potter and the Sorcerer's Stone",
       imgUrl: HarryPotterAndSorcerStone,
       author: "J.K. Rowling",
-      price: "12.00",
+      price: 12.0,
       publisher: "Scholastic Inc",
       length: "322 pages",
       language: "English",

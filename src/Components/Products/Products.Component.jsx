@@ -28,7 +28,7 @@ const speProducts = products => {
 
 const Products = ({ products }) => {
   return (
-    <Container fluid>
+    <Container>
       <div className="products-con">
         {window.location.pathname === "/"
           ? allProducts(products)

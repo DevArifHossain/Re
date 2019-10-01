@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { List, Divider, Button } from "semantic-ui-react";
 import "./product-cart.style.scss";
 
-const ProductChart = ({ productItems }) => {
+const ProductChart = ({ productItems, totalPrice }) => {
   return (
     <div className="product-cart">
       <ul className="product-items">
@@ -16,7 +16,7 @@ const ProductChart = ({ productItems }) => {
               <img src={item.imgUrl} alt={item.title} />
               <div className="content">
                 <h5 className="title">{item.title}</h5>
-                <span>${item.price}</span>
+                <span>${item.price.toFixed(2)}</span>
                 <span> X </span>
                 <span>{item.quantity}</span>
               </div>
@@ -27,7 +27,7 @@ const ProductChart = ({ productItems }) => {
 
       <Divider />
       <div className="checkout">
-        <h3 className="total">$55.55</h3>
+        <h3 className="total">$ {totalPrice.toFixed(2)}</h3>
         <Button secondary>
           <Link to="/checkout">CHECKOUT</Link>
         </Button>
@@ -37,6 +37,11 @@ const ProductChart = ({ productItems }) => {
 };
 
 const mapStateToProps = ({ products }) => ({
-  productItems: products.addedItems
+  productItems: products.addedItems,
+  totalPrice: products.addedItems.reduce(
+    (totalP, item) => totalP + item.quantity * item.price,
+    0
+  )
 });
+
 export default connect(mapStateToProps)(ProductChart);

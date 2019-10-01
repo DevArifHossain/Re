@@ -1,18 +1,6 @@
 @import "../../../index.scss";
 
 .product-detail-modal {
-  .product-title {
-    font-family: $light-font;
-    font-size: 3rem;
-    font-weight: 100;
-    text-transform: capitalize;
-  }
-
-  .product-price {
-    margin: 0;
-    color: green;
-  }
-
   .ui.table {
     margin: 3rem 0;
   }

@@ -6,8 +6,8 @@ import Checkout from "./Pages/Checkout/Checkout.page";
 const App = () => {
   return (
     <Switch>
-      <Route exact path="/" component={Homepage} />
       <Route exact path="/checkout" component={Checkout} />
+      <Route path="/" component={Homepage} />
     </Switch>
   );
 };

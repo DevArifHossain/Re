@@ -32,7 +32,7 @@ const CheckoutItems = ({
               <Image src={item.imgUrl} alt={item.title} size="tiny"></Image>
             </Table.Cell>
             <Table.Cell>{item.title}</Table.Cell>
-            <Table.Cell>$ {item.price}</Table.Cell>
+            <Table.Cell>$ {item.price.toFixed(2)}</Table.Cell>
             <Table.Cell>
               <Button.Group secondary>
                 <Button icon onClick={() => decreaseProduct(item)}>
@@ -44,9 +44,7 @@ const CheckoutItems = ({
                 </Button>
               </Button.Group>
             </Table.Cell>
-            <Table.Cell>
-              $ {(Number(item.price) * item.quantity).toFixed(2)}
-            </Table.Cell>
+            <Table.Cell>$ {(item.price * item.quantity).toFixed(2)}</Table.Cell>
             <Table.Cell>
               <Button color="red" onClick={() => removeProduct(item)}>
                 Remove
