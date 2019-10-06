@@ -71,6 +71,308 @@ const books = {
       publisher: "HarperPerennial / Perennial Classics",
       length: "288 pages",
       language: "English"
+    },
+
+    //Delete from here
+    {
+      id: nanoid(),
+      title: "To Kill a Mockingbird",
+      imgUrl: ToKillMockingBird,
+      author: "Harper Lee",
+      price: 6.99,
+      publisher: "Harper Perennial Modern Classics",
+      length: "324 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Harry Potter and the Sorcerer's Stone",
+      imgUrl: HarryPotterAndSorcerStone,
+      author: "J.K. Rowling",
+      price: 12.0,
+      publisher: "Scholastic Inc",
+      length: "322 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "The Kite Runner",
+      imgUrl: TheKiteRunner,
+      author: "Khaled Hosseini",
+      price: 8.5,
+      publisher: "Riverhead Books",
+      length: "371 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Catching Fire",
+      imgUrl: CatchingFire,
+      author: "Suzanne Collins",
+      price: 9.99,
+      publisher: "Scholastic Press",
+      length: "391 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Brave New World",
+      imgUrl: BraveNewWorld,
+      author: "Aldous Huxley",
+      price: 20.38,
+      publisher: "HarperPerennial / Perennial Classics",
+      length: "288 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "To Kill a Mockingbird",
+      imgUrl: ToKillMockingBird,
+      author: "Harper Lee",
+      price: 6.99,
+      publisher: "Harper Perennial Modern Classics",
+      length: "324 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Harry Potter and the Sorcerer's Stone",
+      imgUrl: HarryPotterAndSorcerStone,
+      author: "J.K. Rowling",
+      price: 12.0,
+      publisher: "Scholastic Inc",
+      length: "322 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "The Kite Runner",
+      imgUrl: TheKiteRunner,
+      author: "Khaled Hosseini",
+      price: 8.5,
+      publisher: "Riverhead Books",
+      length: "371 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Catching Fire",
+      imgUrl: CatchingFire,
+      author: "Suzanne Collins",
+      price: 9.99,
+      publisher: "Scholastic Press",
+      length: "391 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Brave New World",
+      imgUrl: BraveNewWorld,
+      author: "Aldous Huxley",
+      price: 20.38,
+      publisher: "HarperPerennial / Perennial Classics",
+      length: "288 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "To Kill a Mockingbird",
+      imgUrl: ToKillMockingBird,
+      author: "Harper Lee",
+      price: 6.99,
+      publisher: "Harper Perennial Modern Classics",
+      length: "324 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Harry Potter and the Sorcerer's Stone",
+      imgUrl: HarryPotterAndSorcerStone,
+      author: "J.K. Rowling",
+      price: 12.0,
+      publisher: "Scholastic Inc",
+      length: "322 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "The Kite Runner",
+      imgUrl: TheKiteRunner,
+      author: "Khaled Hosseini",
+      price: 8.5,
+      publisher: "Riverhead Books",
+      length: "371 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Catching Fire",
+      imgUrl: CatchingFire,
+      author: "Suzanne Collins",
+      price: 9.99,
+      publisher: "Scholastic Press",
+      length: "391 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Brave New World",
+      imgUrl: BraveNewWorld,
+      author: "Aldous Huxley",
+      price: 20.38,
+      publisher: "HarperPerennial / Perennial Classics",
+      length: "288 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "To Kill a Mockingbird",
+      imgUrl: ToKillMockingBird,
+      author: "Harper Lee",
+      price: 6.99,
+      publisher: "Harper Perennial Modern Classics",
+      length: "324 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Harry Potter and the Sorcerer's Stone",
+      imgUrl: HarryPotterAndSorcerStone,
+      author: "J.K. Rowling",
+      price: 12.0,
+      publisher: "Scholastic Inc",
+      length: "322 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "The Kite Runner",
+      imgUrl: TheKiteRunner,
+      author: "Khaled Hosseini",
+      price: 8.5,
+      publisher: "Riverhead Books",
+      length: "371 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Catching Fire",
+      imgUrl: CatchingFire,
+      author: "Suzanne Collins",
+      price: 9.99,
+      publisher: "Scholastic Press",
+      length: "391 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Brave New World",
+      imgUrl: BraveNewWorld,
+      author: "Aldous Huxley",
+      price: 20.38,
+      publisher: "HarperPerennial / Perennial Classics",
+      length: "288 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "To Kill a Mockingbird",
+      imgUrl: ToKillMockingBird,
+      author: "Harper Lee",
+      price: 6.99,
+      publisher: "Harper Perennial Modern Classics",
+      length: "324 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Harry Potter and the Sorcerer's Stone",
+      imgUrl: HarryPotterAndSorcerStone,
+      author: "J.K. Rowling",
+      price: 12.0,
+      publisher: "Scholastic Inc",
+      length: "322 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "The Kite Runner",
+      imgUrl: TheKiteRunner,
+      author: "Khaled Hosseini",
+      price: 8.5,
+      publisher: "Riverhead Books",
+      length: "371 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Catching Fire",
+      imgUrl: CatchingFire,
+      author: "Suzanne Collins",
+      price: 9.99,
+      publisher: "Scholastic Press",
+      length: "391 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Brave New World",
+      imgUrl: BraveNewWorld,
+      author: "Aldous Huxley",
+      price: 20.38,
+      publisher: "HarperPerennial / Perennial Classics",
+      length: "288 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "To Kill a Mockingbird",
+      imgUrl: ToKillMockingBird,
+      author: "Harper Lee",
+      price: 6.99,
+      publisher: "Harper Perennial Modern Classics",
+      length: "324 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Harry Potter and the Sorcerer's Stone",
+      imgUrl: HarryPotterAndSorcerStone,
+      author: "J.K. Rowling",
+      price: 12.0,
+      publisher: "Scholastic Inc",
+      length: "322 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "The Kite Runner",
+      imgUrl: TheKiteRunner,
+      author: "Khaled Hosseini",
+      price: 8.5,
+      publisher: "Riverhead Books",
+      length: "371 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Catching Fire",
+      imgUrl: CatchingFire,
+      author: "Suzanne Collins",
+      price: 9.99,
+      publisher: "Scholastic Press",
+      length: "391 pages",
+      language: "English"
+    },
+    {
+      id: nanoid(),
+      title: "Brave New World",
+      imgUrl: BraveNewWorld,
+      author: "Aldous Huxley",
+      price: 20.38,
+      publisher: "HarperPerennial / Perennial Classics",
+      length: "288 pages",
+      language: "English"
     }
   ],
   mystery: [

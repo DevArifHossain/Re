@@ -5,24 +5,12 @@ import {
   removeItemFromCart
 } from "./productUtils";
 import books from "../../data/booksData";
-
-import HarryPotterAndSorcerStone from "../../assets/images/books/fiction/Harry-Potter-and-the-Sorcerers-Stone.jpg";
+import featuredProducts from "../../data/featuredBooks";
 
 const defaultState = {
   data: books,
-  addedItems: [
-    {
-      id: 234324,
-      title: "Harry Potter and the Sorcerer's Stone",
-      imgUrl: HarryPotterAndSorcerStone,
-      author: "J.K. Rowling",
-      price: 12.0,
-      publisher: "Scholastic Inc",
-      length: "322 pages",
-      language: "English",
-      quantity: 22
-    }
-  ]
+  addedItems: [],
+  featuredItems: featuredProducts
 };
 
 const productReducer = (state = defaultState, action) => {
@@ -31,6 +19,11 @@ const productReducer = (state = defaultState, action) => {
       return {
         ...state,
         data: state.data
+      };
+    case productTypes.VIEW_FEATURED_PRODUCTS:
+      return {
+        ...state,
+        featuredItems: state.featuredItems
       };
     case productTypes.ADD_PRODUCTS:
       return {
