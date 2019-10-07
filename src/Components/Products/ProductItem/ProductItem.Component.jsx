@@ -7,8 +7,14 @@ import { addProductAction } from "../../../redux/products/productAction";
 
 import "./product-item.style.scss";
 
-const ProductItem = ({ data, addItem }) => {
+const ProductItem = ({ data, addItem, productItems }) => {
   const { title, author, price, imgUrl } = data;
+
+  let addedItem;
+  if (productItems.length > 0) {
+    addedItem = productItems.find(item => item.id === data.id);
+  }
+
   return (
     <Card className="product-card">
       <Image src={imgUrl} wrapped ui={false} />
@@ -19,7 +25,12 @@ const ProductItem = ({ data, addItem }) => {
         </Card.Meta>
       </Card.Content>
       <Card.Content extra>
-        <h3 className="price">{price.toFixed(2)} $</h3>
+        <div className="price-detail">
+          <h3 className="price">{price.toFixed(2)} $</h3>
+          <span className="quantity">
+            {addedItem ? "x" + addedItem.quantity : ""}
+          </span>
+        </div>
       </Card.Content>
 
       <div className="product-card__overaly">
@@ -32,11 +43,15 @@ const ProductItem = ({ data, addItem }) => {
   );
 };
 
+const mapStateToProps = ({ products }) => ({
+  productItems: products.addedItems
+});
+
 const mapDispathToProps = dispatch => ({
   addItem: item => dispatch(addProductAction(item))
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispathToProps
 )(ProductItem);

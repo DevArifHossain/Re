@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Pagination } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 

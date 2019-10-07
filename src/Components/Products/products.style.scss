@@ -6,7 +6,8 @@
   background-color: #eee;
   justify-content: center;
   flex-wrap: wrap;
-
+  max-height: 900px;
+  overflow: auto;
   .product-card {
     width: 180px;
     height: 360px;
@@ -32,10 +33,22 @@
       }
     }
 
-    .price {
-      text-align: center;
-      color: green;
+    .price-detail {
+      display: flex;
+      justify-content: center;
+      .price {
+        text-align: center;
+        color: green;
+      }
+
+      .quantity {
+        font-size: 12px;
+        margin-left: 6px;
+        margin-top: -2px;
+        color: #333;
+      }
     }
+
     .product-card__overaly {
       position: absolute;
       top: 0;
