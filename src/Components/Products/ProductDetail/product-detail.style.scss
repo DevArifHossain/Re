@@ -4,6 +4,13 @@
   .ui.table {
     margin: 3rem 0;
   }
+  .product-price {
+    sup {
+      font-size: 13px;
+      color: #333;
+      margin-top: -6px;
+    }
+  }
   .product-details {
     padding: 0;
     margin: 2.5rem 0;

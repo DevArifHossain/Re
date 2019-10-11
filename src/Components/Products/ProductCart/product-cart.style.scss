@@ -12,15 +12,7 @@
     height: 70%;
     overflow-y: auto;
     overflow-x: hidden;
-    .not-added {
-      font-size: 3rem;
-      font-family: $light-font;
-      color: red;
-      font-weight: 100;
-      letter-spacing: 2px;
-      margin: 2rem 1rem;
-      text-align: center;
-    }
+
     .item {
       display: flex;
       img {
@@ -46,4 +38,14 @@
       margin: 0;
     }
   }
+}
+
+.not-added {
+  font-size: 3rem;
+  font-family: $light-font;
+  color: red;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 2rem 1rem;
+  text-align: center;
 }

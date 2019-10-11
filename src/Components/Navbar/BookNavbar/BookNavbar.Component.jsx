@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu, Container } from "semantic-ui-react";
 import "./bookNavbar.style.scss";
 
@@ -8,25 +8,39 @@ const BookNavbar = () => {
     <Container>
       <Menu pointing secondary className="book-navbar">
         <Menu.Item>
-          <Link to="/">All</Link>
+          <NavLink exact activeClassName="active-nav-link" to="/">
+            All
+          </NavLink>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/fiction">Fiction</Link>
+          <NavLink exact activeClassName="active-nav-link" to="/fiction">
+            Fiction
+          </NavLink>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/history">History</Link>
+          <NavLink exact activeClassName="active-nav-link" to="/history">
+            History
+          </NavLink>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/mystery">Mystery</Link>
+          <NavLink exact activeClassName="active-nav-link" to="/mystery">
+            Mystery
+          </NavLink>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/science">Science</Link>
+          <NavLink exact activeClassName="active-nav-link" to="/science">
+            Science
+          </NavLink>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/fantasy">Fantasy</Link>
+          <NavLink exact activeClassName="active-nav-link" to="/fantasy">
+            Fantasy
+          </NavLink>
         </Menu.Item>
         <Menu.Item>
-          <Link to="/others">Others</Link>
+          <NavLink activeClassName="active-nav-link" to="/others">
+            Others
+          </NavLink>
         </Menu.Item>
       </Menu>
     </Container>

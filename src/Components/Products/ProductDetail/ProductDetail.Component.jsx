@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { addProductAction } from "../../../redux/products/productAction";
 import "./product-detail.style.scss";
 
-const ProductDetail = ({ data, addItem }) => {
+const ProductDetail = ({ data, addedItem, addItem }) => {
   const { title, author, length, price, publisher, language, imgUrl } = data;
 
   return (
@@ -17,7 +17,10 @@ const ProductDetail = ({ data, addItem }) => {
         <Image wrapped size="medium" src={imgUrl} />
         <Modal.Description>
           <h1 className="product-title">{title}</h1>
-          <h2 className="product-price">$ {price}</h2>
+          <h2 className="product-price">
+            $ {price}
+            <sup>{addedItem ? " x " + addedItem.quantity : ""}</sup>
+          </h2>
           <Table definition>
             <Table.Body>
               <Table.Row>

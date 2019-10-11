@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon, Container } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "./logo-bar.style.scss";
 
@@ -19,9 +20,9 @@ class LogoBar extends React.Component {
     return (
       <Container fluid>
         <nav className="logo-bar">
-          <span className="nav-logo">
+          <Link to="/" className="nav-logo">
             <span style={{ color: "#61DBFB", fontWeight: "bold" }}>Re</span>Shop
-          </span>
+          </Link>
           <span className="re-cart" onClick={cartVisibilityHandler}>
             <span className="cart">
               <Icon name="shopping bag" />

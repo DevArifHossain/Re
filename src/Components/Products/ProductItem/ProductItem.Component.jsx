@@ -7,12 +7,12 @@ import { addProductAction } from "../../../redux/products/productAction";
 
 import "./product-item.style.scss";
 
-const ProductItem = ({ data, addItem, productItems }) => {
+const ProductItem = ({ data, addItem, addedItems }) => {
   const { title, author, price, imgUrl } = data;
 
   let addedItem;
-  if (productItems.length > 0) {
-    addedItem = productItems.find(item => item.id === data.id);
+  if (addedItems.length > 0) {
+    addedItem = addedItems.find(item => item.id === data.id);
   }
 
   return (
@@ -34,7 +34,7 @@ const ProductItem = ({ data, addItem, productItems }) => {
       </Card.Content>
 
       <div className="product-card__overaly">
-        <ProductDetail data={data} />
+        <ProductDetail data={data} addedItem={addedItem} />
         <Button primary onClick={() => addItem(data)}>
           Add to Cart
         </Button>
@@ -44,7 +44,7 @@ const ProductItem = ({ data, addItem, productItems }) => {
 };
 
 const mapStateToProps = ({ products }) => ({
-  productItems: products.addedItems
+  addedItems: products.addedItems
 });
 
 const mapDispathToProps = dispatch => ({
