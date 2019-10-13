@@ -9,6 +9,7 @@ const CheckoutSummary = ({ productQuantity, totalPrice }) => {
       <span className="total price">
         Total Price : {totalPrice.toFixed(2)} $
       </span>
+      <span className="remove-item"></span>
     </div>
   );
 };

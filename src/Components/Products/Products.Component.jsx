@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "semantic-ui-react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import ProductItem from "../Products/ProductItem/ProductItem.Component";
@@ -21,11 +21,16 @@ const allProducts = products => {
 // showing different categorized books on different routes
 const speProducts = products => {
   let urlPrams = window.location.pathname.substr(1);
-  let categorizedProducts = products[urlPrams];
 
-  return categorizedProducts.map(product => (
-    <ProductItem key={product.id} data={product} />
-  ));
+  const categories = Object.keys(products);
+  if (categories.indexOf(urlPrams) >= 0) {
+    const categorizedProducts = products[urlPrams];
+
+    return categorizedProducts.map(product => (
+      <ProductItem key={product.id} data={product} />
+    ));
+  }
+  return <Redirect to="/404" />;
 };
 
 const Products = ({ products }) => {
