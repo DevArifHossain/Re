@@ -4,6 +4,7 @@ import { Container } from "semantic-ui-react";
 import LogoBar from "../../Components/Navbar/LogoBar/LogoBar.Component";
 import CheckoutSummary from "../../Components/Checkout/CheckoutSummary/CheckoutSummary.Component";
 import CheckoutItems from "../../Components/Checkout/CheckoutItems/CheckoutItems.Component";
+import StripeButton from "../../Components/StripeButton/StripeButton.Component";
 
 const Checkout = () => {
   return (
@@ -13,6 +14,7 @@ const Checkout = () => {
         <div className="checkout">
           <CheckoutSummary />
           <CheckoutItems />
+          <StripeButton />
         </div>
       </Container>
     </>

@@ -1,11 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Container, Image, Table, Button } from "semantic-ui-react";
+import { Container, Image, Table, Button, Icon } from "semantic-ui-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./featured-products.style.scss";
+
 import { addProductAction } from "../../../redux/products/productAction";
+import "./featured-products.style.scss";
 
 const FeaturedProducts = ({ addItem, featuredItems, addedItems }) => {
   const settings = {

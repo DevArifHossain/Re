@@ -1,9 +1,10 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
+import { connect } from "react-redux";
 
-const StripeButton = ({ price }) => {
+const StripeButton = ({ totalPrice }) => {
   // to get the price in cents
-  const priceForStripe = price * 100;
+  const priceForStripe = totalPrice * 100;
   // Replace this with your publish key
   const publishableKey = "pk_test_8h0rjNz8pZTfcJuOSrwpkHE900KjFkVRRK";
 
@@ -18,7 +19,7 @@ const StripeButton = ({ price }) => {
       billingAddress
       currency="USD"
       shippingAddress
-      description={`Your total is $${price}`}
+      description={`Your total is $${totalPrice}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
       token={onToken}
@@ -27,4 +28,11 @@ const StripeButton = ({ price }) => {
   );
 };
 
-export default StripeButton;
+const mapStateToProps = ({ products }) => ({
+  totalPrice: products.addedItems.reduce(
+    (totalP, item) => totalP + item.quantity * item.price,
+    0
+  )
+});
+
+export default connect(mapStateToProps)(StripeButton);

@@ -1,9 +1,10 @@
 import React from "react";
-import { Icon, Container } from "semantic-ui-react";
+import { Icon, Container, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "./logo-bar.style.scss";
 
+import { auth } from "../../../firebase/firebase.uitls";
 import ProductCart from "../../Products/ProductCart/ProductCart.Component";
 
 class LogoBar extends React.Component {
@@ -16,7 +17,9 @@ class LogoBar extends React.Component {
         showCart: !this.state.showCart
       });
     };
+
     const { productQuantity } = this.props;
+    console.log(this.props.user);
     return (
       <Container fluid>
         <nav className="logo-bar">
@@ -31,17 +34,28 @@ class LogoBar extends React.Component {
             <span className="items">{productQuantity} Items</span>
           </span>
           {this.state.showCart && <ProductCart />}
+
+          <Link to="/auth">
+            {this.props.user ? (
+              <Button color="red" onClick={() => auth.signOut()}>
+                Logout
+              </Button>
+            ) : (
+              <Button color="blue">Login</Button>
+            )}
+          </Link>
         </nav>
       </Container>
     );
   }
 }
 
-const mapStateToProps = ({ products }) => ({
+const mapStateToProps = ({ products, users }) => ({
   productQuantity: products.addedItems.reduce(
     (totalQ, item) => totalQ + item.quantity,
     0
-  )
+  ),
+  user: users.currentUser
 });
 
 export default connect(mapStateToProps)(LogoBar);
