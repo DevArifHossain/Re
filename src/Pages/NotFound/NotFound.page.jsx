@@ -1,13 +1,20 @@
 import React from "react";
-import { Container, Icon } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
+import "./not-found.style.scss";
 
 const NotFound = () => {
   return (
-    <Container>
-      <Icon name="frown outline" size="massive" />
-      <h1>404</h1>
-      <h4>Page Not Found</h4>
-    </Container>
+    <div className="not-found">
+      <Container className="not-found__container">
+        <h1>404</h1>
+        <h2>
+          sorry, the page is not found!{" "}
+          <span role="img" aria-label="sad emoji">
+            😔😔
+          </span>
+        </h2>
+      </Container>
+    </div>
   );
 };
 

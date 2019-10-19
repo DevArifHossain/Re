@@ -13,7 +13,9 @@ const ProductChart = ({ productItems, totalPrice }) => {
         {productItems.length === 0 ? (
           <h2 className="not-added">No Product Added!!</h2>
         ) : (
-          productItems.map(item => <ProductChartItem item={item} />)
+          productItems.map(item => (
+            <ProductChartItem item={item} key={item.id} />
+          ))
         )}
       </ul>
 

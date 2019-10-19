@@ -1,0 +1,44 @@
+.sign-in-container {
+  form {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+
+    label {
+      text-align: left;
+    }
+  }
+
+  .social-container {
+    margin: 20px 0;
+    .bg-google-col {
+      background-color: #dd4b39;
+    }
+
+    .bg-fb-col {
+      background-color: #3b5998;
+    }
+
+    .bg-github-col {
+      background-color: #333;
+    }
+    .social {
+      border-radius: 50%;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px;
+      height: 40px;
+      width: 40px;
+      i {
+        color: white;
+        margin: 0;
+      }
+    }
+  }
+}

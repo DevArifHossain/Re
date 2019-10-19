@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { Form, Button, Icon } from "semantic-ui-react";
+import { Form, Button, Icon, Divider } from "semantic-ui-react";
 
 import {
   auth,
   signInWithGoogle,
   signInWithFB,
   signInWithGithub
-} from "../../firebase/firebase.uitls";
-// import "./auth.scss";
+} from "../../../firebase/firebase.uitls";
+import "./signin.style.scss";
 
 class SignIn extends Component {
   state = {
@@ -52,7 +52,9 @@ class SignIn extends Component {
               <Icon className="github" />
             </span>
           </div>
-          <span>or use your account</span>
+
+          <Divider horizontal>Or</Divider>
+
           <Form.Field>
             <label>Email Address</label>
             <input
@@ -76,7 +78,9 @@ class SignIn extends Component {
               onChange={this.onInputCange}
             />
           </Form.Field>
-          <Button type="submit">Submit</Button>
+          <Button secondary type="submit" style={{ marginTop: "1rem" }}>
+            Submit
+          </Button>
         </Form>
       </div>
     );

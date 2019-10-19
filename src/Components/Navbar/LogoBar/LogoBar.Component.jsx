@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Container, Button, Image } from "semantic-ui-react";
+import { Icon, Container, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "./logo-bar.style.scss";
@@ -33,18 +33,19 @@ class LogoBar extends React.Component {
               Cart :
             </span>
             <span className="items">{productQuantity} Items</span>
-          </span>
-          {this.state.showCart && <ProductCart />}
 
-          <Link to="/auth">
-            {this.props.user ? (
-              <Button color="red" onClick={() => auth.signOut()}>
-                Logout
-              </Button>
-            ) : (
-              <Button color="blue">Login</Button>
-            )}
-          </Link>
+            {this.state.showCart && <ProductCart />}
+
+            <Link to="/auth" className="auth">
+              {this.props.user ? (
+                <Button color="red" onClick={() => auth.signOut()}>
+                  Logout
+                </Button>
+              ) : (
+                <Button color="blue">Login</Button>
+              )}
+            </Link>
+          </span>
         </nav>
       </Container>
     );

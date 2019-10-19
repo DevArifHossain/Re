@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Form, Button } from "semantic-ui-react";
-import { auth, createUserProfileDoc } from "../../firebase/firebase.uitls";
-// import "./auth.scss";
+import { auth, createUserProfileDoc } from "../../../firebase/firebase.uitls";
+import "./signup.style.scss";
 
 class SignUp extends Component {
   state = {
@@ -52,7 +52,6 @@ class SignUp extends Component {
       <div className="form-container sign-up-container">
         <Form action="#" onSubmit={this.onFormSubmit}>
           <h1>Create Account</h1>
-          <span>or use your email for registration</span>
           <Form.Field className="input-field">
             <label htmlFor="displayName">Full Name</label>
             <input
@@ -101,7 +100,7 @@ class SignUp extends Component {
               required
             />
           </Form.Field>
-          <Button secondary className="main-btn">
+          <Button secondary type="submit" style={{ marginTop: "1rem" }}>
             Sign Up
           </Button>
         </Form>

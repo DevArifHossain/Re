@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .book-navbar {
   display: flex;
   justify-content: space-between;
@@ -5,13 +7,18 @@
   &::after {
     display: none;
   }
+
+  a {
+    padding: 6px 12px;
+  }
+  .active-nav-link {
+    color: white;
+    background-color: $blue;
+    border-radius: 4px;
+  }
 }
 
 .ui.menu:after {
   content: none;
   display: none;
-}
-
-.active-nav-link {
-  color: green !important;
 }

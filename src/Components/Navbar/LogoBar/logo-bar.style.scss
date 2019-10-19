@@ -18,10 +18,11 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    position: relative;
 
     .cart {
       font-size: 16px;
-      margin-right: 1rem;
+      margin-right: 10px;
       text-transform: uppercase;
     }
 
@@ -31,11 +32,15 @@
       font-family: $light-font;
       letter-spacing: 1px;
     }
+
+    .auth {
+      margin-left: 20px;
+    }
   }
 
   .product-cart {
     position: absolute;
     right: 0px;
-    top: 60px;
+    top: 50px;
   }
 }
