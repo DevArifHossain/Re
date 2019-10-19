@@ -25,10 +25,7 @@ class App extends Component {
             ...snapshot.data()
           });
         });
-
-        console.log(userAuth);
       }
-
       createUserAction(userAuth);
     });
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, Container, Button } from "semantic-ui-react";
+import { Icon, Container, Button, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "./logo-bar.style.scss";
@@ -19,7 +19,8 @@ class LogoBar extends React.Component {
     };
 
     const { productQuantity } = this.props;
-    console.log(this.props.user);
+    // const userEmail = this.props.user ? this.props.user.email : "not now";
+    // console.log(userEmail);
     return (
       <Container fluid>
         <nav className="logo-bar">

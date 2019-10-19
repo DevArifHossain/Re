@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import LogoBar from "../../Components/Navbar/LogoBar/LogoBar.Component";
 import SimpleSlider from "../../Components/Products/FeaturedProducts/FeaturedProducts.Component";
+import Features from "../../Components/Features/Features.Component";
 import BookNavbar from "../../Components/Navbar/BookNavbar/BookNavbar.Component";
 import Products from "../../Components/Products/Products.Component";
 import Footer from "../../Components/Footer/Footer.Component";
@@ -14,6 +15,7 @@ const Homepage = () => {
     <>
       <LogoBar />
       <SimpleSlider />
+      <Features />
       <BookNavbar />
       <Products />
       <Footer />
