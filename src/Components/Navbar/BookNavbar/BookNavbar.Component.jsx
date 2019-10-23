@@ -6,7 +6,7 @@ import "./bookNavbar.style.scss";
 const BookNavbar = () => {
   return (
     <Container>
-      <Menu pointing secondary className="book-navbar">
+      <Menu pointing stackable secondary className="book-navbar">
         <Menu.Item>
           <NavLink exact activeClassName="active-nav-link" to="/">
             All

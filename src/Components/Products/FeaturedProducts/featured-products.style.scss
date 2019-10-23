@@ -23,3 +23,22 @@
     }
   }
 }
+
+// for mobile screen
+@media (max-width: 600px) {
+  .featured-products {
+    margin: 2rem 0;
+    height: 190px;
+    .featured-product {
+      padding: 20px 10px;
+
+      img {
+        height: 130px !important;
+      }
+
+      .content {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}

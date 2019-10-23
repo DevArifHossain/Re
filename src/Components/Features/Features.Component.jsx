@@ -5,7 +5,7 @@ import "./features.style.scss";
 const Features = () => (
   <Container>
     <div className="features">
-      <Grid columns={4} divided textAlign="center">
+      <Grid stackable columns={4} divided textAlign="center">
         <Grid.Row>
           <Grid.Column>
             <div className="feature">

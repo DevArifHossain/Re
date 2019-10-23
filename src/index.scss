@@ -13,7 +13,12 @@ body {
 }
 
 .ui.fluid.container {
-  width: 100%;
   max-width: 1600px !important;
   padding: 0 3rem;
+}
+
+@media (max-width: 600px) {
+  .ui.fluid.container {
+    padding: 0;
+  }
 }
